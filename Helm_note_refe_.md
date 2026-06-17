@@ -68,9 +68,7 @@ Kubernetes Cluster
 > Note: Helm v3 removed Tiller (used in Helm v2).
 
 ---
-
-# 4. Helm Terminologies
-
+# 4. Helm Terminologies:
 | Term        | Description                     |
 | ----------- | ------------------------------- |
 | Chart       | Package of Kubernetes resources |
@@ -95,8 +93,7 @@ A Helm repository contains packaged chart files (`.tgz`) and an `index.yaml` fil
 * Bitnami Helm repository
 * Artifact Hub for discovering charts
 
-### Add a Helm Repository
-
+### Add a Helm Repository:
 ```bash
 helm repo add bitnami https://charts.bitnami.com/bitnami
 ```
@@ -224,8 +221,7 @@ After installation, Kubernetes creates resources like Deployments and Services.
 * **Helm Chart** = Package used to deploy an application on Kubernetes.
 
 ---
-# 5. Install Helm
-
+# 5. Install Helm:
 ### Linux
 
 ```bash
@@ -245,9 +241,7 @@ version.BuildInfo{Version:"v3.x.x"}
 ```
 
 ---
-
-# 6. Add Helm Repository
-
+# 6. Add Helm Repository:
 Add Bitnami repository:
 
 ```bash
@@ -273,9 +267,7 @@ helm search repo nginx
 ```
 
 ---
-
-# 7. Install Application Using Helm
-
+# 7. Install Application Using Helm:
 Install Nginx:
 
 ```bash
@@ -295,9 +287,7 @@ kubectl get all
 ```
 
 ---
-
-# 8. Helm Release Lifecycle
-
+# 8. Helm Release Lifecycle:
 ```text
 Install → Upgrade → Rollback → Uninstall
 ```
@@ -329,9 +319,7 @@ helm uninstall myapp
 ```
 
 ---
-
-# 9. Create Your Own Helm Chart
-
+# 9. Create Your Own Helm Chart:
 Create chart:
 
 ```bash
@@ -354,9 +342,7 @@ myapp/
 ```
 
 ---
-
-# 10. Chart.yaml
-
+# 10. Chart.yaml:
 Contains chart metadata.
 
 Example:
@@ -371,9 +357,7 @@ appVersion: "1.0"
 ```
 
 ---
-
-# 11. values.yaml
-
+# 11. values.yaml:
 Stores configurable values.
 
 Example:
@@ -391,9 +375,7 @@ service:
 ```
 
 ---
-
-# 12. Deployment Template Example
-
+# 12. Deployment Template Example:
 `templates/deployment.yaml`
 
 ```yaml
@@ -420,9 +402,7 @@ spec:
 ```
 
 ---
-
-# 13. Service Template Example
-
+# 13. Service Template Example:
 ```yaml
 apiVersion: v1
 kind: Service
@@ -439,9 +419,7 @@ spec:
 ```
 
 ---
-
-# 14. Helm Variables
-
+# 14. Helm Variables:
 | Variable         | Description        |
 | ---------------- | ------------------ |
 | `.Values`        | Access values.yaml |
@@ -456,9 +434,7 @@ image: "{{ .Values.image.repository }}"
 ```
 
 ---
-
-# 15. Helm Template Functions
-
+# 15. Helm Template Functions:
 ### IF Condition
 
 ```yaml
@@ -484,9 +460,7 @@ kind: Ingress
 ```
 
 ---
-
-# 16. Dry Run Before Deployment
-
+# 16. Dry Run Before Deployment:
 Generate YAML:
 
 ```bash
@@ -506,9 +480,7 @@ helm install myapp . --dry-run --debug
 ```
 
 ---
-
-# 17. Override Values
-
+# 17. Override Values:
 Using command line:
 
 ```bash
@@ -532,9 +504,7 @@ prod-values.yaml
 ```
 
 ---
-
-# 18. Upgrade Application
-
+# 18. Upgrade Application:
 Change image version:
 
 ```bash
@@ -549,9 +519,7 @@ kubectl get pods
 ```
 
 ---
-
-# 19. View Release History
-
+# 19. View Release History:
 ```bash
 helm history myapp
 ```
@@ -566,9 +534,7 @@ REVISION    STATUS
 ```
 
 ---
-
-# 20. Rollback Release
-
+# 20. Rollback Release;
 Rollback to revision 1:
 
 ```bash
@@ -598,9 +564,7 @@ myapp-1.0.0.tgz
 ```
 
 ---
-
-# 22. Push Chart to Repository
-
+# 22. Push Chart to Repository:
 You can store charts in:
 
 * Nexus
@@ -615,9 +579,7 @@ helm push myapp-1.0.0.tgz oci://myrepo
 ```
 
 ---
-
-# 23. OCI Registry Support
-
+# 23. OCI Registry Support:
 Login:
 
 ```bash
@@ -637,9 +599,7 @@ helm pull oci://myrepo.com/charts/myapp
 ```
 
 ---
-
-# 24. Helm with Jenkins Pipeline
-
+# 24. Helm with Jenkins Pipeline:
 Example:
 
 ```groovy
@@ -655,9 +615,7 @@ stage('Helm Deploy') {
 ```
 
 ---
-
-# 25. Real-Time DevOps Workflow
-
+# 25. Real-Time DevOps Workflow:
 ```text
 Developer commits code
         ↓
@@ -677,9 +635,7 @@ Kubernetes Deployment
 ```
 
 ---
-
-# 26. Important Helm Commands Cheat Sheet
-
+# 26. Important Helm Commands Cheat Sheet:
 ```bash
 helm version
 helm repo add
@@ -697,9 +653,6 @@ helm package myapp
 ```
 
 ---
-
-# 27. Helm Interview Questions
-
 ### Q1: What is Helm?
 
 **Answer:** Helm is a package manager for Kubernetes used to deploy and manage applications using charts.

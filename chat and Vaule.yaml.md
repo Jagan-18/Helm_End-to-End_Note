@@ -178,19 +178,14 @@ with:
 and deploys the application.
 
 ---
-
-# Interview Answer
-
 **Q: What are `Chart.yaml`, `values.yaml`, and `templates` in Helm?**
 
 **Answer:**
-
 * **`Chart.yaml`** contains chart metadata such as name and version.
 * **`values.yaml`** stores configurable values for the application.
 * **`templates/`** contains Kubernetes manifest templates that use values from `values.yaml` to generate actual YAML files during deployment.
 
-### Easy Way to Remember
-
+### Easy Way to Remember:
 ```text
 Chart.yaml    → Chart Information
 values.yaml   → Configuration Values
