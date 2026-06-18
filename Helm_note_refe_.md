@@ -2,6 +2,10 @@
 # Github Refe URL: 
 - https://github.com/iam-veeramalla/helm-zero-to-hero/
 
+# Helm Chat Url: 
+- https://jhooq.com/getting-start-with-helm-chart/
+- https://jhooq.com/categories/helm-chart/
+
 # Helm End-to-End Notes for DevOps Engineers
 
 ## 1. What is Helm?
